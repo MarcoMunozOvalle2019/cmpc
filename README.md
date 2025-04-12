@@ -24,6 +24,6 @@ Caracteristicas: Realizado con autenticacion jwt, arq.hexagonal basica( inversio
 
 9 ... se entiende que faltan temas por terminar y mejorar
 
-comentarios: a futuro crear csv , usuarios en postgres
+comentarios: a futuro crear csv con Multer, usuarios en postgres
 
  ...muchas gracias
