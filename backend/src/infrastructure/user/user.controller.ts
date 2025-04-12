@@ -4,6 +4,7 @@ import { /*UserBookEntity*/UserEntity } from "../entities";
 import {
   Post,
   Body,
+  Patch,
   ValidationPipe,
   UnprocessableEntityException,
   Put,
@@ -37,6 +38,7 @@ export class UserController {
 
     user.created=new Date()
     user.updated=new Date()
+
     return await this.userService.createUser(user);
   }
 
@@ -45,6 +47,14 @@ export class UserController {
   return this.userService.deleteUser(id);
   }
   
+  @Patch(':id')
+  async update(
+    @Param('id') id: number,
+    @Body() updateBookDto: UserEntity,
+  ): Promise<UpdateResult> {
+    console.log('arribando...',updateBookDto)
+    return this.userService.updateUser(id,updateBookDto);
+  }  
   
 }
 

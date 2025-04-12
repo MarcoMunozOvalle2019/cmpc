@@ -4,10 +4,12 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class JwtAuthGuard extends AuthGuard('jwt') {
-  canActivate(
+  canActivate(    
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
-    console.log('Adentro JWT AuthGuard canActivate');
-    return super.canActivate(context);
+    let mm=super.canActivate(context);
+    console.log('wwwwwAdentro JWT AuthGuard canActivate',mm);
+
+    return mm
   }
 }

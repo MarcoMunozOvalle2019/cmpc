@@ -25,7 +25,7 @@ export class UserService {
   }
 
   async createUser(user:User): Promise<User> {
-    console.log('llega',user)
+    console.log('llegaBase',user)
     const userToCreate = {
       ...user,
       id:user.id,
@@ -37,8 +37,6 @@ export class UserService {
       genero: user.genero,
       imagenUrl: user.imagenUrl      
     };
-    console.log('uu1',user)
-    console.log('uu2',userToCreate)
     const result = await this.userRepository.save(
     await this.userRepository.create(userToCreate)
     );
@@ -52,6 +50,25 @@ export class UserService {
     await this.userRepository.delete(id);
   }
 
+  async updateUser(id:number,user:User): Promise<UpdateResult> {
+    console.log('llegaBase Update',user)
+    const userToUpdate = {
+      id:user.id,
+      titulo: user.titulo,
+      autor: user.autor,
+      editorial: user.editorial,
+      precio:user.precio,
+      disponibilidad: user.disponibilidad,
+      genero: user.genero,
+      imagenUrl: user.imagenUrl      
+    };
+    const result = await this.userRepository.update(id,
+        // await this.userRepository.update(userToUpdate)
+        userToUpdate
+    );
+
+    return result;
+  }  
   
 
 }

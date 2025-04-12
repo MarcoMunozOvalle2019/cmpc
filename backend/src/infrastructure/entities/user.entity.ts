@@ -19,30 +19,11 @@ export class UserEntity extends BaseEntity {
   @Column()
   editorial: string;
   @Column()
-  precio:number;
+  precio:string;
   @Column()
   disponibilidad: string;
   @Column()
   genero: string;
   @Column()
   imagenUrl: string;
-
-
-  // // @Column()
-  // // name: string;
-
-  // // @Column({
-  // //   unique: true,
-  // // })
-  // // email: string;
-
-  // // @Column({
-  // //   select: false,
-  // // })
-  // // password: string;
-
-  // // @Column({
-  // //   nullable: false,
-  // // })
-  // // grant: number;  
 }

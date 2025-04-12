@@ -1,0 +1,460 @@
+/* .mainContainer {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background: radial-gradient(white, rgba(0, 110, 110, 0.2) 50%);
+} */
+
+.compo2 {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,168,217,1) 35%, rgba(0,212,255,1) 100%);
+  height: 200vh;
+
+}
+
+.botones {
+  position: absolute ;
+  top: 30% ;
+  left: 40% ;
+
+  bottom: 40% ;
+  right: 40%;
+}
+
+.AgregaLibro {
+  background: rgb(75, 6, 30);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 154% ;
+  left: 51% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+.AgregaTitulo {
+  background: rgb(176, 188, 222);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 154% ;
+  left: 51% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+.AgregaDatos {
+  background: rgb(26, 76, 224);
+  height: 20px;
+  width: 0px;
+  position: relative;
+  top: 114% ;
+  left: 61% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+.AgregaAutor {
+  background: rgb(176, 188, 222);
+  height: 20px;
+  width: 100px;
+  position: relative;
+  top: 114% ;
+  left: 51% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+.AgregaEditorial {
+  background: rgb(176, 188, 222);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 154% ;
+  left: 51% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+.AgregaPrecio {
+  background: rgb(176, 188, 222);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 154% ;
+  left: 51% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+.AgregaDisponibilidad {
+  background: rgb(176, 188, 222);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 154% ;
+  left: 51% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+
+.AgregaGenero {
+  background: rgb(176, 188, 222);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 154% ;
+  left: 51% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+
+.AgregaImagenUrl {
+  background: rgb(176, 188, 222);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 154% ;
+  left: 51% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+
+
+.titulo {
+  position: relative;
+  font-size: 25px;
+  top: 0% ;
+  left: 14% ;
+
+  bottom: 0% ;
+  right: 0%;
+}
+
+.mainContainer {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,168,217,1) 35%, rgba(0,212,255,1) 100%);
+  height: 200vh;
+}
+
+.bgrhb {
+  position: absolute;
+
+  top: 40% ;
+  left: 40% ;
+
+  bottom: 40% ;
+  right: 40%;
+  
+}
+
+.username {
+  color: rgb(0, 0, 0);
+
+  position: absolute;
+
+  top: 20% ;
+  left: 40% ;
+
+  bottom: 600% ;
+  right: 40%;
+}
+
+.password {
+  position: absolute;
+
+  top: 30% ;
+  left: 40% ;
+
+  bottom: 600% ;
+  right: 40%;
+}
+
+
+.inputContainer {
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.inputContainer > .errorLabel {
+  color: red;
+  font-size: 12px;
+}
+
+.inputBox {
+  height: 48px;
+  width: 400px;
+  font-size: large;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding-left: 8px;
+}
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  font-weight: bolder;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type='submit'] {
+  border: none;
+  background: cornflowerblue;
+  color: white;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.botonesCompra {
+  background: rgb(67, 183, 230);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 54% ;
+  left: -1% ;
+
+  bottom: 0% ;
+  right: 0%;
+
+}
+
+.contenedorBotones {
+  background: rgb(157, 199, 202);
+  width: 300px;
+  height: 175px;
+  margin: 20px;
+
+}
+
+.Imagenes {
+  height: 110px;
+  position: relative;
+  top: 10% ;
+  left: 10% ;
+
+  bottom: 10% ;
+  right: 10%;
+}
+
+
+
+.tituloProductos{
+  margin: 6px;
+  font-size: 20px;
+  position:relative;
+  top: 10% ;
+  left: 5% ;
+
+  bottom: 10% ;
+  right: 10%;
+}
+
+.contenedorCarrito{
+  background: rgb(157, 199, 202);
+  width: 300px;
+  height: 175px;
+  margin: 20px;
+}
+
+.comprable {
+  background: aqua;
+  height: 600px;
+  position: absolute;
+  top: 15% ;
+  left: 5% ;
+
+  bottom: 0% ;
+  right: 70%;
+}
+
+.enCarrito{
+  background: cyan;
+  float: right;
+  position: relative;
+  top: 4% ;
+  left: 0% ;
+
+  bottom: 0% ;
+  right: 0%; 
+}
+
+.comprar{
+  background: rgb(22, 137, 204);
+  width: 110px;
+  height: 50px;
+  position: relative;
+  top: 5% ;
+  left: 35% ;
+
+  bottom: 0% ;
+  right: 0%;
+}
+
+.precio{
+  background: rgb(67, 183, 230);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 10% ;
+  left: -15% ;
+
+  bottom: 0% ;
+  right: 20%;
+}
+
+.borrarProducto{
+  background: rgb(67, 183, 230);
+  height: 50px;
+  width: 100px;
+  position: relative;
+  top: 15% ;
+  left: -15% ;
+
+  bottom: 0% ;
+  right: 20%
+}
+
+
+.MenuComprar {
+  background: rgb(157, 199, 202);
+  position: relative;
+  height: 150px;
+  width: 300px;
+  top: 0% ;
+  left: 5% ;
+
+  bottom: 0% ;
+  right: 10%
+
+}
+
+.imagenesCarrito{
+  height: 110px;
+  position: relative;
+  top: 10% ;
+  left: 10% ;
+
+  bottom: 10% ;
+  right: 10%;
+}
+
+.tituloCarrito{
+  margin: 6px;
+  font-size: 20px;
+  position:relative;
+  top: 10% ;
+  left: 5% ;
+
+  bottom: 10% ;
+  right: 10%;
+}
+
+.botonComprar{
+  background: cyan;
+  height: 50px;
+  position: relative;
+  top: 0% ;
+  left: 35% ;
+
+  bottom: 0% ;
+  right: 0%;
+}
+
+.fondoPagar{
+  background:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(168,168,217,1) 35%, rgba(0,212,255,1) 100%) ;
+  width: 100%;
+  height: 1000px;
+}
+
+.imagenPagar{
+  width: 80%;
+  position: absolute;
+  top: 30% ;
+  left: 10% ;
+
+  bottom: 0% ;
+  right: 0%;
+}
+
+.contenedorImagenes{
+  float: left;
+  width: 200px;
+  position: relative;
+  top: 10% ;
+  left: 0% ;
+
+  bottom: 0% ;
+  right: 0%;
+}
+
+.contenedorImagenesComprable{
+  float: left;
+  width: 200px;
+  position: relative;
+  top: 10% ;
+  left: 0% ;
+
+  bottom: 0% ;
+  right: 0%;
+}
+
+.tituloPagar{
+  font-size: 40px;
+  background: rgb(157, 199, 202) ;
+  width: 300px;
+}
+
+.regresar{
+  background: rgb(136, 220, 226);
+  height: 50px;
+  width: 200px;
+  position: relative;
+  top: 5% ;
+  left: 0% ;
+
+  bottom: 0% ;
+  right: 0%
+}
+
+.pagar{
+  background: rgb(136, 220, 226);
+  height: 50px;
+  width: 200px;
+  position: relative;
+  top: 5% ;
+  left: 0% ;
+
+  bottom: 0% ;
+  right: 0%
+}
+
+
+
+.todoMenu{
+  display:flex
+  justify-content:center
+}
+@media screen and (max-width:950px){
+  .todoMenu{
+    display:inline-block;
+  }
+}
