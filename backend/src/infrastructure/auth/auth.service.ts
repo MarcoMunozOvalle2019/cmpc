@@ -8,6 +8,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { UserEntity } from '../../infrastructure/entities/user.entity';
 import { Repository } from 'typeorm';
 
+// TODO: Para este trabajo cmpc se considera no llevar a base de datos los usuario
 const UsersHabilitados = [
   {
     id: 1,

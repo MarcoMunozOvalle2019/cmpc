@@ -1,0 +1,55 @@
+SWAGGER:
+http://localhost:3000/api-docs
+
+
+CURLS POSTMAN:
+
+crear token:
+curl --location --request POST 'localhost:3000/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "marco",
+    "password": "password"
+}'
+
+validar token:
+curl --location --request GET 'http://localhost:3000/auth/status' \
+--header 'Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJtYXJjbyIsImlhdCI6MTc0NDQwMTQwOSwiZXhwIjoxNzQ0NDA1MDA5fQ.eXg6nkmNWKzZfCiGp0jqVSILxBzMQRcgWlcTcGag4yc' \
+--header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJtYXJjbyIsImlhdCI6MTc0NDQ2NDMxNiwiZXhwIjoxNzQ0NDY3OTE2fQ.tdO-X8Vjjzcfd-16RjCURfPp9eCoNx4gez8QCQVP7ng' \
+--data-raw ''
+
+leer libros:
+curl --location --request GET 'http://localhost:3000/books' \
+--data-raw ''
+
+crear libros:curl --location --request POST 'http://localhost:3000/books' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "titulo":"programacion",
+    "autor":"Jose",
+    "editorial":"3",
+    "precio":"4",
+    "disponibilidad":"5",
+    "genero":"6",
+    "imagenUrl":"7"     
+
+}'
+
+
+modificar libros:
+curl --location --request PATCH 'http://localhost:3000/books/41' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "titulo":"cambio",
+    "autor":"21",
+    "editorial":"3",
+    "precio":"4",
+    "disponibilidad":"5",
+    "genero":"6",
+    "imagenUrl":"7"     
+
+}'
+
+eliminar libro:
+curl --location --request DELETE 'http://localhost:3000/books/25' \
+--data-raw ''
