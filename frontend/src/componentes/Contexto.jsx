@@ -19,6 +19,8 @@ export function Contexto(props) {
     const URL2= import.meta.env.VITE_URL || "http://localhost:3000/books"
     const URL3= import.meta.env.VITE_URL || "http://localhost:3000/books"
     const URL4= import.meta.env.VITE_URL || "http://localhost:3000/books"
+    const URL5= import.meta.env.VITE_URL || "http://localhost:3000/books/csv"
+    
     
     async function enviacredencialesAWS(usuario, clave){                  
       let salida
@@ -68,6 +70,20 @@ export function Contexto(props) {
       .catch(error => console.error(error));
       return salida
    }
+
+  const reporteLibros = async()=>{
+    let salida=[]
+    await fetch(`${URL5}`, {
+      method: 'GET',
+      headers: {
+       'Content-Type':'application/json',
+     },
+    })
+    .then(response => response.json())
+    .then(data => salida=data)
+    .catch(error => console.error(error));
+    return salida
+ }
 
 
    const eliminaLibros = async(id)=>{
@@ -130,22 +146,6 @@ export function Contexto(props) {
   }
 
 
-    function baja(a) {
-      setConta(conta - a)
-    }
-
-    function borrar(b) {
-      baja(b)
-      let otro = []
-      carrito.map((g)=>{
-        if(g.a!=b){ 
-          otro.push(g)
-        } 
-      })
-      setCarrito(otro)
-    }
-
-
     const handleChange = (event) => {
         event.preventDefault()
         const { name, value } = event.target;
@@ -178,7 +178,7 @@ export function Contexto(props) {
   return (
     
 
-    <NombreContexto.Provider value={{ editorial, setEditorial,precio, setPrecio,disponibilidad, setDisponibilidad,genero, setGenero,imagenUrl, setImagenUrl,agregaLibro, eliminaLibros,actualizaLibro, buscarLibros,validaToken, enviacredencialesAWS, borrar, handleChange, user, pass,autor,titulo,isLoggedIn, setIsLoggedIn,setUser,setPass,setTitulo,setAutor}} >
+    <NombreContexto.Provider value={{ reporteLibros ,editorial, setEditorial,precio, setPrecio,disponibilidad, setDisponibilidad,genero, setGenero,imagenUrl, setImagenUrl,agregaLibro, eliminaLibros,actualizaLibro, buscarLibros,validaToken, enviacredencialesAWS, handleChange, user, pass,autor,titulo,isLoggedIn, setIsLoggedIn,setUser,setPass,setTitulo,setAutor}} >
         {props.children}
     </NombreContexto.Provider>
   )

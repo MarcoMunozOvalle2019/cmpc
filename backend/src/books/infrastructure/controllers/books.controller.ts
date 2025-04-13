@@ -28,8 +28,8 @@ export class BooksController {
     schema: {
       type: 'object',
       properties: {
-        user: { // the `user` word comes from @Body('user')
-          properties: { // these properties are coming from `UserDto`
+        user: { 
+          properties: { 
             id: { type: 'number' },
             username: { type: 'string' },
             email: { type: 'string' },
@@ -47,6 +47,7 @@ export class BooksController {
 
   @Get()
   async findAll(): Promise<Book[]> {
+
     return this.findAllBooksService.execute();
   }
 

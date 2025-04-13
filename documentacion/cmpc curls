@@ -53,3 +53,8 @@ curl --location --request PATCH 'http://localhost:3000/books/41' \
 eliminar libro:
 curl --location --request DELETE 'http://localhost:3000/books/25' \
 --data-raw ''
+
+
+reporte libros:
+curl --location --request GET 'http://localhost:3000/books/csv' \
+--data-raw ''

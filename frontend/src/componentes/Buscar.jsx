@@ -4,7 +4,7 @@ import { useContext,useEffect,useState} from 'react'
 
 const Buscar = () => {
   const [words, setWords] = useState([])
-  const {editorial, precio, disponibilidad,genero,titulo,autor,handleChange,buscarLibros,agregaLibro, eliminaLibros,actualizaLibro} = useContext(NombreContexto)
+  const {editorial, precio, disponibilidad,genero,titulo,autor,handleChange,buscarLibros,agregaLibro, reporteLibros,eliminaLibros,actualizaLibro} = useContext(NombreContexto)
   let libros=[]
 
   useEffect(() => {
@@ -17,6 +17,10 @@ const Buscar = () => {
   const elimina=async(id)=>{
     libros = await eliminaLibros(id); 
     actualiza()
+  }
+
+  const reporte=async()=>{
+    libros = await reporteLibros(); 
   }
 
   const actualizaData=async(id)=>{
@@ -43,11 +47,13 @@ const Buscar = () => {
 
 return (
     <div>
+            <button className='Csv' onClick={()=>{ reporte() }}>
+                reporte libros csv
+           </button>
       
        <div >
             <div  className={'AgregaDatos'}>
-              
-
+            
 
             <form onSubmit={handleSubmit}>
 
@@ -109,8 +115,6 @@ return (
                     />
                 </label>
 
-
-
                 <input className='AgregaLibro' type='submit' ></input>
               </form >
 
@@ -137,8 +141,8 @@ return (
         </div>        
 
 
-      ))}      
 
+      ))}      
     </div>
    )
 

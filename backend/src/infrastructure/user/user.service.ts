@@ -1,11 +1,9 @@
 import * as bcrypt from "bcrypt";
-
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository, UpdateResult, DeleteResult } from "typeorm";
-import { ConfigService, InjectConfig } from "nestjs-config";
-
 import { UserEntity as User, UserEntity } from "./../entities";
+
 
 @Injectable()
 export class UserService {
@@ -13,19 +11,53 @@ export class UserService {
 
   constructor(
     @InjectRepository(User) private readonly userRepository: Repository<User>,
-  ) { 
-  }
+  ) { }
 
+  
   async findAll(): Promise<User[]> {
     return await this.userRepository.find();
   }
 
+  async findAllandGenerateCsv(): Promise<User[]> {
+      const users=await this.userRepository.find();
+
+      const createCsvWriter = require('csv-writer').createArrayCsvWriter;
+      const csvWriter = createCsvWriter({
+          header:[
+            "id",
+            "created",
+            "updated",
+            "titulo",
+            "autor",
+            "editorial",
+            "precio",
+            "disponibilidad",
+            "genero",
+            "imagenUrl"            
+            ],
+          path: 'path/to/reporte_cmpc.csv'
+      });
+      
+      let informe=[]
+      const data=users.map((esto)=>{
+        var result = Object.keys(esto).map((key) => esto[key]);
+        informe.push(result)
+      })
+    
+      csvWriter.writeRecords(informe)  
+          .then(() => {
+              console.log('...Listo');
+          });
+    
+    return users
+  }
+
+  
   async getHash(password: string): Promise<string> {
     return await bcrypt.hash(password, this.saltRounds);
   }
 
   async createUser(user:User): Promise<User> {
-    console.log('llegaBase',user)
     const userToCreate = {
       ...user,
       id:user.id,
@@ -46,12 +78,10 @@ export class UserService {
 
 
   async deleteUser(id: number): Promise<void> {
-    console.log('delete',id)
     await this.userRepository.delete(id);
   }
 
   async updateUser(id:number,user:User): Promise<UpdateResult> {
-    console.log('llegaBase Update',user)
     const userToUpdate = {
       id:user.id,
       titulo: user.titulo,

@@ -1,17 +1,12 @@
 import { Controller, Delete } from "@nestjs/common";
 import { UserService } from "./user.service";
-import { /*UserBookEntity*/UserEntity } from "../entities";
+import { UserEntity } from "../entities";
 import {
   Post,
   Body,
   Patch,
-  ValidationPipe,
-  UnprocessableEntityException,
-  Put,
   Get,
   Param,
-  NotFoundException,
-  UseGuards,
   Request,
 } from "@nestjs/common";
 import { Repository, UpdateResult, DeleteResult } from "typeorm";
@@ -20,6 +15,13 @@ import { Repository, UpdateResult, DeleteResult } from "typeorm";
 @Controller("books")
 export class UserController {
   constructor(private readonly userService: UserService) {}
+
+  generateCsv
+  @Get("csv")
+  async generateAllCsv(): Promise<UserEntity[]> {
+    return await this.userService.findAllandGenerateCsv();
+  }
+
   @Get()
   async getAllUsers(): Promise<UserEntity[]> {
     return await this.userService.findAll();

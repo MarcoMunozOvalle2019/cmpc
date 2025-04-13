@@ -7,9 +7,7 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
   canActivate(    
     context: ExecutionContext,
   ): boolean | Promise<boolean> | Observable<boolean> {
-    let mm=super.canActivate(context);
-    console.log('wwwwwAdentro JWT AuthGuard canActivate',mm);
-
-    return mm
+    let carabinero=super.canActivate(context);
+    return carabinero
   }
 }
