@@ -1,6 +1,4 @@
 id,created,updated,titulo,autor,editorial,precio,disponibilidad,genero,imagenUrl
-127,Sat Apr 12 2025 00:00:00 GMT-0400 (hora estándar de Chile),Thu Feb 01 2001 00:00:00 GMT-0300 (hora de verano de Chile),tit1,marco,cmpc,10,si,g1,
-128,Sat Apr 12 2025 00:00:00 GMT-0400 (hora estándar de Chile),Thu Feb 01 2001 00:00:00 GMT-0300 (hora de verano de Chile),tit2,marco,cmpc,14,si,g2,
-129,Sat Apr 12 2025 00:00:00 GMT-0400 (hora estándar de Chile),Thu Feb 01 2001 00:00:00 GMT-0300 (hora de verano de Chile),tit3,mario,cmpc,12,si,g1,
-130,Sat Apr 12 2025 00:00:00 GMT-0400 (hora estándar de Chile),Thu Feb 01 2001 00:00:00 GMT-0300 (hora de verano de Chile),tit4,dani,cmpc,23,no,g2,
-131,Sat Apr 12 2025 00:00:00 GMT-0400 (hora estándar de Chile),Thu Feb 01 2001 00:00:00 GMT-0300 (hora de verano de Chile),tit5,jose,cmpc,99,si,g7,
+210,Fri May 02 2025 00:00:00 GMT-0400 (hora estándar de Chile),Thu Feb 01 2001 00:00:00 GMT-0300 (hora de verano de Chile),titulo2,2,2,2,2,2,
+207,Fri May 02 2025 00:00:00 GMT-0400 (hora estándar de Chile),Thu Feb 01 2001 00:00:00 GMT-0300 (hora de verano de Chile),titulo2,1,1,1,1,1,imag
+211,Fri May 02 2025 00:00:00 GMT-0400 (hora estándar de Chile),Thu Feb 01 2001 00:00:00 GMT-0300 (hora de verano de Chile),titulo23,1,1,1,1,1,

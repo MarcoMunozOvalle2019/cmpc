@@ -35,11 +35,11 @@
 
 }
 .AgregaTitulo {
-  background: rgb(176, 188, 222);
+  background: rgb(11, 39, 116);
   height: 50px;
-  width: 100px;
+  width: 10px;
   position: relative;
-  top: 154% ;
+  top:  54% ;
   left: 51% ;
 
   bottom: 0% ;
@@ -51,11 +51,8 @@
   height: 20px;
   width: 0px;
   position: relative;
-  top: 114% ;
-  left: 61% ;
-
-  bottom: 0% ;
-  right: 0%;
+  top: 14% ;
+  left: 41% ;
 
 }
 .AgregaAutor {

@@ -20,39 +20,6 @@ export class PaginatorBookService {
     const { page, limit, filter, sortBy, sortOrder, genre, editorial, author, availability } = options;
     const skip = (page - 1) * limit;
 
-    // TODO
-    // const where: FindOptionsWhere<Book> = {};
-    // if (filter) {
-    //   where.titulo = Like(`%${filter}%`);
-    // }
-    // if (genre) {
-    //   where.genero = genre;
-    // }
-    // if (editorial) {
-    //   where.editorial = editorial;
-    // }
-    // if (author) {
-    //   where.autor = Like(`%${author}%`);
-    // }
-    // if (availability !== undefined) {
-    //   where.disponibilidad = availability;
-    // }
-
-    // const [data, total] = await this.bookRepository.findAndCount({
-    //   where,
-    //   skip,
-    //   take: limit,
-    //   order: sortBy ? { [sortBy]: sortOrder } : undefined,
-    // });
-
-    // const totalPages = Math.ceil(total / limit);
-
-    // return {
-    //   data,
-    //   total,
-    //   currentPage: page,
-    //   totalPages,
-    // };
     return
   }
 

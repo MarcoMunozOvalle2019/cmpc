@@ -92,11 +92,9 @@ export class UserService {
       genero: user.genero,
       imagenUrl: user.imagenUrl      
     };
-    const result = await this.userRepository.update(id,
-        // await this.userRepository.update(userToUpdate)
+        const result = await this.userRepository.update(id,
         userToUpdate
     );
-
     return result;
   }  
   

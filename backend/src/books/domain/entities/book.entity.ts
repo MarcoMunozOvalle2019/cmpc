@@ -3,7 +3,7 @@ export class Book {
     autor: string;
     editorial: string;
     precio: number;
-    disponibilidad: number;
+    disponibilidad: string;
     genero: string;
     imagenUrl?: string;
   

@@ -7,6 +7,5 @@ export interface BookRepository {
   update(id: number, bookData: Partial<Book>): Promise<Book | null>;
   delete(id: number): Promise<boolean>;
   softDelete(id: number): Promise<boolean>;
-  findByTitulo(titulo: string): Promise<Book | null>; // Ejemplo para validaciones
-  // ... otros métodos de búsqueda y manipulación
+  findByTitulo(titulo: string): Promise<Book | null>; 
 }

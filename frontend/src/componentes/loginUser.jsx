@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { NombreContexto} from './Contexto'
 
 export function LogInUser() {
+
+
   localStorage.setItem("token", '');
    const {handleChange, enviacredencialesAWS, validaToken, setIsLoggedIn,user,pass,setUser,setPass,setTitulo,setAutor} = useContext(NombreContexto)
    const nav = useNavigate();
@@ -22,11 +24,14 @@ export function LogInUser() {
      }else{setIsLoggedIn(false)}
 
      nav('/crud'); 
+
+
    };    
+
+
 
    return (
     <div className={'mainContainer'}>
-  
         <div className={'titleContainer'}>
           <div>Login</div>
         </div>
@@ -37,7 +42,7 @@ export function LogInUser() {
             <input className={'inputContainer'}
               type="text"
               name="username"
-              placeholder='Ingrese tu username weon'
+              placeholder='Ingrese tu username'
               onChange={handleChange}
             />
         </label>
@@ -55,7 +60,13 @@ export function LogInUser() {
 
       </form >
 
+
+
    </div>
+
+
+
+
    )
 
 }

@@ -18,7 +18,7 @@ export class BookEntity {
   precio: number;
 
   @Column()
-  disponibilidad: number;
+  disponibilidad: string;
 
   @Column()
   genero: string;

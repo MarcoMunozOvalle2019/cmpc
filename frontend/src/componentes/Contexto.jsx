@@ -4,6 +4,7 @@ export const NombreContexto = createContext()
 export function Contexto(props) {
     const [user, setUser]= useState('')
     const [pass, setPass]= useState('')
+    const [id, setId]= useState(0)
     const [titulo, setTitulo]= useState('')
     const [autor, setAutor]= useState('')
     const [editorial, setEditorial]= useState('')
@@ -17,9 +18,7 @@ export function Contexto(props) {
     const URL= import.meta.env.VITE_URL || "http://localhost:3000/auth/login"
     const URL1= import.meta.env.VITE_URL || "http://localhost:3000/auth/status"
     const URL2= import.meta.env.VITE_URL || "http://localhost:3000/books"
-    const URL3= import.meta.env.VITE_URL || "http://localhost:3000/books"
-    const URL4= import.meta.env.VITE_URL || "http://localhost:3000/books"
-    const URL5= import.meta.env.VITE_URL || "http://localhost:3000/books/csv"
+    const URL3= import.meta.env.VITE_URL || "http://localhost:3000/books/csv"
     
     
     async function enviacredencialesAWS(usuario, clave){                  
@@ -73,7 +72,7 @@ export function Contexto(props) {
 
   const reporteLibros = async()=>{
     let salida=[]
-    await fetch(`${URL5}`, {
+    await fetch(`${URL3}`, {
       method: 'GET',
       headers: {
        'Content-Type':'application/json',
@@ -88,7 +87,7 @@ export function Contexto(props) {
 
    const eliminaLibros = async(id)=>{
     let salida
-    await fetch(`${URL3}/${id}`, {
+    await fetch(`${URL2}/${id}`, {
       method: 'DELETE',
       headers: {
        'Content-Type':'application/json',
@@ -100,8 +99,8 @@ export function Contexto(props) {
 
   const actualizaLibro = async(id)=>{
     let salida
-    console.log(id)
-    await fetch(`${URL4}/${id}`, {
+
+    await fetch(`${URL2}/${id}`, {
       method: 'PATCH',
       headers: {
       'Content-Type':'application/json',
@@ -125,8 +124,7 @@ export function Contexto(props) {
 
   const agregaLibro = async(titulo,autor,editorial, precio, disponibilidad,genero)=>{
     let salida
-
-    await fetch(`${URL4}`, {
+    await fetch(`${URL2}`, {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({
@@ -148,6 +146,7 @@ export function Contexto(props) {
 
     const handleChange = (event) => {
         event.preventDefault()
+
         const { name, value } = event.target;
         if(event.target.name == 'Titulo'){
           setTitulo(event.target.value)
@@ -170,7 +169,6 @@ export function Contexto(props) {
         if(event.target.name == 'password1'){
           setPass(event.target.value)
         }
-
         if(event.target.name == 'username'){
           setUser(event.target.value)
         }
@@ -178,7 +176,7 @@ export function Contexto(props) {
   return (
     
 
-    <NombreContexto.Provider value={{ reporteLibros ,editorial, setEditorial,precio, setPrecio,disponibilidad, setDisponibilidad,genero, setGenero,imagenUrl, setImagenUrl,agregaLibro, eliminaLibros,actualizaLibro, buscarLibros,validaToken, enviacredencialesAWS, handleChange, user, pass,autor,titulo,isLoggedIn, setIsLoggedIn,setUser,setPass,setTitulo,setAutor}} >
+    <NombreContexto.Provider value={{ id, setId,reporteLibros ,editorial, setEditorial,precio, setPrecio,disponibilidad, setDisponibilidad,genero, setGenero,imagenUrl, setImagenUrl,agregaLibro, eliminaLibros,actualizaLibro, buscarLibros,validaToken, enviacredencialesAWS, handleChange, user, pass,autor,titulo,isLoggedIn, setIsLoggedIn,setUser,setPass,setTitulo,setAutor}} >
         {props.children}
     </NombreContexto.Provider>
   )

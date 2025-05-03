@@ -20,8 +20,8 @@ export class CreateBookDto {
   precio: number;
 
   @IsNotEmpty()
-  @IsNumber()
-  disponibilidad: number;
+  @IsString()
+  disponibilidad: string;
 
   @IsNotEmpty()
   @IsString()

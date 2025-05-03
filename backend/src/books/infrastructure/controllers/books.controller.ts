@@ -22,7 +22,7 @@ export class BooksController {
     private readonly deleteBookService: DeleteBookService,
     private readonly pagBookService: PaginatorBookService,
   ) {}
-  //http://localhost:3000/api-docs#/
+
   @ApiTags('libros')
   @ApiBody({
     schema: {
@@ -86,16 +86,5 @@ export class BooksController {
 
 
     return
-    // return this.pagBookService.execute({
-    //   page: Number(page),
-    //   limit: Number(limit),
-    //   filter,
-    //   sortBy,
-    //   sortOrder,
-    //   genre,
-    //   editorial,
-    //   author,
-    //   availability,
-    // });
   }  
 }

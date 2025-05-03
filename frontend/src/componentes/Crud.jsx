@@ -1,4 +1,4 @@
-import Buscar from "./buscar";
+import Buscar from './Buscar';
 import { NombreContexto } from './Contexto'//cambio
 import {useContext} from 'react' 
 
@@ -9,7 +9,7 @@ return (
       {isLoggedIn
         ? 
         <div>
-        <h1>CRUD</h1>
+        <h1>Libros CMPC</h1>
             <Buscar/>
         </div>
         : 

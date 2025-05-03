@@ -18,8 +18,8 @@ export class UpdateBookDto {
   precio?: number;
 
   @IsOptional()
-  @IsNumber()
-  disponibilidad?: number;
+  @IsString()
+  disponibilidad?: string;
 
   @IsOptional()
   @IsString()
