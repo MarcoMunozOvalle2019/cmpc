@@ -4,6 +4,8 @@ https://github.com/MarcoMunozOvalle2019/cmpc/tree/main/frontend
 Proyecto: Realizado con tecnologias NestJs(backend) , React-hook(frontend), postgress
 Caracteristicas: Realizado con autenticacion jwt, arq.hexagonal basica( inversion de dependencias).
 
+Caracteristicas: Posee Autenticacion por Estrategia JWT
+
 repositorio cmpc:
 https://github.com/MarcoMunozOvalle2019/cmpc/blob/main/README.md
 
@@ -19,7 +21,7 @@ REPOSITORIO DOCUMENTACION: se recomienda. jeje
 
 2 npm i --force
   npm i class-validator --force
-  (se fuerzan debido a incompatibilidad, por mejorar)
+  (se fuerzan debido a incompatibilidad, ...por mejorar)
 
 2 levantar base datos postgres (local)
 
@@ -29,6 +31,7 @@ REPOSITORIO DOCUMENTACION: se recomienda. jeje
 
 5 Tambien se agrega docker-compose( correr: docker-compose up -d --build )
   o levantar backend/npm run start y frontEnd/npm run dev
+
 6 ingresar usuario en Front:
     username: 'marco',
     password: 'password',
