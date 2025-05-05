@@ -17,23 +17,28 @@ REPOSITORIO DOCUMENTACION: se recomienda. jeje
 
 1 download repositorios
 
-2 levantar base datos postgres
+2 npm i --force
+  npm i class-validator --force
+  (se fuerzan debido a incompatibilidad, por mejorar)
 
-3 levantar backend (npm run start)ç
+2 levantar base datos postgres (local)
+
+3 levantar backend (npm run start)
 
 4 levanta frontend (npm run dev http://localhost:5173/)
 
-5 ingreesar usuario:
+5 Tambien se agrega docker-compose( correr: docker-compose up -d --build )
+  o levantar backend/npm run start y frontEnd/npm run dev
+6 ingresar usuario en Front:
     username: 'marco',
     password: 'password',
     
-6 una vez en vista usuario crear libros (enviar)
+7 una vez en vista usuario crear libros (enviar)
 
-7 borrar libros boton "Delete"
+8 borrar libros boton "Delete"
 
-8 modificar libro boton "Actualiza"
+9 modificar libro boton "Actualiza"
 
-9 ... se entiende que faltan temas por terminar y mejorar
 
 comentarios: a futuro crear csv con MULTER , usuarios en postgres, etc 
 

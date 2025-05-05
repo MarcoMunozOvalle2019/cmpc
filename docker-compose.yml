@@ -1,4 +1,4 @@
-version: '3.8'
+# version: '3.8'
 services:
   postgres:
     image: postgres:15-alpine
@@ -51,7 +51,7 @@ services:
       # Variables de entorno específicas de tu frontend (ej., API_URL)
       REACT_APP_API_URL: http://localhost:3000 # Conexión al backend en el host
       NODE_ENV: development # O production
-    command: npm start # O el comando para iniciar tu frontend en desarrollo
+    command: npm dev # O el comando para iniciar tu frontend en desarrollo
     depends_on:
       - backend
     restart: on-failure
